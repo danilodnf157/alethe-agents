@@ -1,4 +1,4 @@
-import { Bot, Boxes, Code2, Gift, Sparkles, Terminal, type LucideIcon } from 'lucide-react'
+import { Bot, Boxes, Code2, Feather, Gift, Sparkles, Terminal, type LucideIcon } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 import { useProjectsStore } from '../../stores/projectsStore'
@@ -17,6 +17,7 @@ const ICONS: Record<AgentType, LucideIcon> = {
   opencode: Boxes,
   freebuff: Gift,
   mimo: Bot,
+  hermes: Feather,
 }
 
 type Hit = {

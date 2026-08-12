@@ -50,6 +50,7 @@ const AGENTS: { id: CodingAgent; label: string }[] = [
   { id: 'opencode', label: 'OpenCode' },
   { id: 'freebuff', label: 'Freebuff' },
   { id: 'mimo', label: 'Mimo' },
+  { id: 'hermes', label: 'Hermes' },
 ]
 
 const FEATURE_ICONS = {

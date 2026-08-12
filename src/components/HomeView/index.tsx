@@ -68,6 +68,7 @@ const NOTIF_AGENT_CLASS: Record<AgentType, string> = {
   opencode: styles.notifOpencode,
   freebuff: styles.notifFreebuff,
   mimo: styles.notifMimo,
+  hermes: styles.notifHermes,
 }
 
 export function HomeView() {

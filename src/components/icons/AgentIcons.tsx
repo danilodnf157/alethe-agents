@@ -49,6 +49,26 @@ export function MimoIcon({ size = 16 }: { size?: number }) {
   )
 }
 
+/** Provisório: caduceu alado monocromático (currentColor), o símbolo que o
+ * próprio CLI usa nas respostas. Trocar pelo logo oficial se houver. */
+export function HermesIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    >
+      <path d="M8 3.5v9.5" strokeLinecap="round" />
+      <path d="M8 3.5c-1.2-1.2-3-1.4-4.5-.6.6 1.6 2 2.6 3.6 2.6" strokeLinejoin="round" />
+      <path d="M8 3.5c1.2-1.2 3-1.4 4.5-.6-.6 1.6-2 2.6-3.6 2.6" strokeLinejoin="round" />
+      <path d="M5.5 8.5h5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
 export function OpenCodeIcon({ size = 16, theme }: { size?: number; theme: Theme }) {
   const lightIcon = theme === 'light' || theme === 'min-light'
   return (
@@ -101,6 +121,7 @@ export function AgentIcon({
   if (type === 'copilot') return <CopilotIcon size={size} />
   if (type === 'freebuff') return <FreebuffIcon size={size} />
   if (type === 'mimo') return <MimoIcon size={size} />
+  if (type === 'hermes') return <HermesIcon size={size} />
   if (type === 'antigravity') return <AntigravityIcon size={size} />
   return <OpenCodeIcon size={size} theme={theme} />
 }

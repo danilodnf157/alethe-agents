@@ -83,6 +83,7 @@ export const en = {
   'agent.freebuff.desc': 'Free coding agent',
   'agent.mimo.desc': 'Xiaomi CLI',
   'agent.antigravity.desc': 'Google Antigravity CLI',
+  'agent.hermes.desc': 'Personal assistant CLI',
 
   /* ---- image input ---- */
   'image.placeholder': 'https://example.com/icon.png',

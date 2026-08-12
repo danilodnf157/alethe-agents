@@ -82,6 +82,7 @@ export const ptBR: Record<MessageKey, string> = {
   'agent.freebuff.desc': 'Agente grátis',
   'agent.mimo.desc': 'CLI da Xiaomi',
   'agent.antigravity.desc': 'Google Antigravity CLI',
+  'agent.hermes.desc': 'CLI de assistente pessoal',
 
   /* ---- image input ---- */
   'image.placeholder': 'https://exemplo.com/icone.png',

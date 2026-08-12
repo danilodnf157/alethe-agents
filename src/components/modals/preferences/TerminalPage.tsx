@@ -22,6 +22,7 @@ const AGENTS: { id: AgentType; label: string }[] = [
   { id: 'opencode', label: 'OpenCode' },
   { id: 'freebuff', label: 'Freebuff' },
   { id: 'mimo', label: 'Mimo Code' },
+  { id: 'hermes', label: 'Hermes' },
 ]
 
 export function TerminalPage({ enabledCount }: { enabledCount: number }) {

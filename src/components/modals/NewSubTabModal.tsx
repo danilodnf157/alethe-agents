@@ -20,6 +20,7 @@ const AGENTS: { type: AgentType; label: string }[] = [
   { type: 'opencode', label: 'OpenCode' },
   { type: 'freebuff', label: 'Freebuff' },
   { type: 'mimo', label: 'Mimo' },
+  { type: 'hermes', label: 'Hermes' },
 ]
 
 export function NewSubTabModal() {
@@ -53,6 +54,7 @@ export function NewSubTabModal() {
     opencode: false,
     freebuff: false,
     mimo: false,
+    hermes: false,
   })
 
   const visibleAgents = AGENTS.filter((a) => enabled[a.type])
@@ -80,6 +82,7 @@ export function NewSubTabModal() {
       opencode: false,
       freebuff: false,
       mimo: false,
+      hermes: false,
     })
   }
 

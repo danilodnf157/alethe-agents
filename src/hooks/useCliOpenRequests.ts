@@ -35,6 +35,7 @@ const AGENT_LABEL: Record<AgentType, string> = {
   shell: 'Shell',
   mimo: 'Mimo',
   freebuff: 'Freebuff',
+  hermes: 'Hermes',
 }
 
 export function useCliOpenRequests(hydrated: boolean) {

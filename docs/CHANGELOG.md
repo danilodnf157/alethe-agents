@@ -10,6 +10,10 @@ Notable user-facing changes to **Alethe** are documented here. The format is bas
 
 ## [Unreleased]
 
+### Adicionado
+
+- **Hermes como tipo de agente.** O [Hermes Agent](https://github.com/NousResearch/hermes-agent) (assistente pessoal em Python, CLI `hermes`) agora aparece no seletor de novo terminal, no de sub-tab, no onboarding e nas Preferências, com ícone e cor próprios. Roda pelo mesmo caminho de PTY dos outros agentes. Sem retomada de sessão por argumento e sem seleção de modelo pela interface: o Hermes guarda sessão e modelo no próprio `HERMES_HOME` (`hermes setup model`).
+
 ## [1.6.0] — 2026-08-17
 
 ### Added
