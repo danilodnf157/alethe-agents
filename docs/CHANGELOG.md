@@ -12,6 +12,7 @@ Mudanças relevantes do **Alethe** para quem usa o app. Formato inspirado em
 
 ### Adicionado
 
+- **Hermes como tipo de agente.** O [Hermes Agent](https://github.com/NousResearch/hermes-agent) (assistente pessoal em Python, CLI `hermes`) agora aparece no seletor de novo terminal, no de sub-tab, no onboarding e nas Preferências, com ícone e cor próprios. Roda pelo mesmo caminho de PTY dos outros agentes. Sem retomada de sessão por argumento e sem seleção de modelo pela interface: o Hermes guarda sessão e modelo no próprio `HERMES_HOME` (`hermes setup model`).
 - **Colar conteúdo do portapapeles via clique direito no terminal (`XTermView`).** Clicar com o botão direito sobre o painel do terminal sem texto selecionado cola o conteúdo do portapapeles (texto, imagens e arquivos). Caso haja texto selecionado no terminal, o clique direito copia a seleção para o portapapeles e limpa o destaque.
 
 ### Alterado

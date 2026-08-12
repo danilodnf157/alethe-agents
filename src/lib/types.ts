@@ -1,5 +1,5 @@
 export type AgentType =
-  'shell' | 'claude' | 'codex' | 'opencode' | 'freebuff' | 'mimo' | 'antigravity'
+  'shell' | 'claude' | 'codex' | 'opencode' | 'freebuff' | 'mimo' | 'antigravity' | 'hermes'
 
 /** Rótulo de exibição de cada agente — fonte única, evita listas paralelas
  * divergentes por componente (ex.: "Claude" vs "Claude Code" pro mesmo tipo). */
@@ -10,6 +10,7 @@ export const AGENT_TYPE_LABELS: Record<AgentType, string> = {
   opencode: 'OpenCode',
   mimo: 'Mimo',
   freebuff: 'Freebuff',
+  hermes: 'Hermes',
   shell: 'Shell',
 }
 
@@ -23,6 +24,7 @@ export const ALL_AGENT_TYPES: AgentType[] = [
   'opencode',
   'mimo',
   'freebuff',
+  'hermes',
   'shell',
 ]
 
@@ -119,9 +121,12 @@ export const UNRESTRICTED_FLAG: Record<AgentType, string | null> = {
   claude: '--dangerously-skip-permissions',
   codex: '--dangerously-bypass-approvals-and-sandbox',
   opencode: '--dangerously-skip-permissions',
-  // freebuff/mimo não documentam flag de skip-permissions própria.
+  // freebuff/mimo não documentam flag de skip-permissions própria. O Hermes
+  // resolve permissão pelo próprio config (`hermes setup tools`), sem flag de
+  // linha de comando.
   freebuff: null,
   mimo: null,
+  hermes: null,
   antigravity: '--dangerously-skip-permissions',
 }
 
@@ -484,6 +489,7 @@ export const DEFAULT_PREFERENCES: Preferences = {
     opencode: true,
     freebuff: true,
     mimo: true,
+    hermes: true,
   },
   onboardingDone: false,
   workspaceFlat: false,
@@ -600,6 +606,9 @@ export const PROVIDER_MODELS: Record<AgentType, { id: string; label: string }[]>
   freebuff: [
     { id: 'freebuff-auto', label: 'Freebuff Auto' },
   ],
+  // O Hermes escolhe provedor e modelo no próprio wizard (`hermes setup model`)
+  // e grava em config.yaml. Não existe flag de modelo pra passar no spawn.
+  hermes: [],
   shell: [
     { id: 'default', label: 'Shell Padrão' },
   ],
